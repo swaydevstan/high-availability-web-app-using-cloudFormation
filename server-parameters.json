@@ -13,7 +13,7 @@
 	},
 	{
 		"ParameterKey": "InstanceMinSize",
-		"ParameterValue": "2"
+		"ParameterValue": "4"
 	},
 	{
 		"ParameterKey": "InstanceMaxSize",

@@ -51,7 +51,7 @@ Resources:
         Statement: 
           - Effect: "Allow"
             Action: "*"
-            Resource: 'arn:aws:s3:::stanudagramfiles/*'
+            Resource: "*"
       Roles: 
         - Ref: "EC2S3AllowRole"
 
@@ -122,13 +122,12 @@ Resources:
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash
-          sudo apt-get update -y
-          sudo apt-get install apache2 -y
-          sudo systemctl start apache2.service
+          apt-get update -y
+          apt-get install apache2 -y
+          systemctl start apache2.service
           cd /var/www/html
-          sudo rm index.html
-          sudo aws s3 cp s3://stanudagramfiles/index.html .
-
+          echo "<h1>Stanley's Udagram Website is Up and Running!</h1>" > index.html
+          systemctl reload apache2.service
       ImageId: !Ref AMiID
       IamInstanceProfile: !Ref EC2S3InstanceProfile
       SecurityGroups:
