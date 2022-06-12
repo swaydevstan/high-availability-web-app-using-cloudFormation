@@ -3,7 +3,7 @@
 This repo contains Cloud Formation Templates to deploy infrastructure shown below: a highly available web site on AWS
 
 
-
+![Architectural Diagram](AWS-Udagram-Architecture.png)
 
  - Network-infrastructure.yml && network-parameters.json contains template and parameters to deploy the networking components of the infrastructure, such as VPC, Internet Gateway, Private and Public Subnets, etc.
  - Server-Infrastructure && server-parameters.json contains template and parameters to deploy the server components, such as the Application load balancer, Autoscaling group and web servers.
