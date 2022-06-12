@@ -1,1 +1,1 @@
-aws cloudformation update-stack --stack-name $1 --template-body file://$2  --parameters file://$3 --capabilities --region=us-east-1 --profile swaydevstan-udacity
+aws cloudformation update-stack --stack-name $1 --template-body file://$2  --parameters file://$3  --region=us-east-1  --capabilities "CAPABILITY_IAM" "CAPABILITY_NAMED_IAM" --profile swaydevstan-udacity

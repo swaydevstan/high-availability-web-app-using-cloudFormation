@@ -50,11 +50,7 @@ Resources:
         Version: "2012-10-17"
         Statement: 
           - Effect: "Allow"
-            Action: 
-            - 's3:GetBucketLocation'
-            - 's3:GetObject'
-            - 's3:GetObjectVersion'
-            - 's3:ListBucket'
+            Action: "*"
             Resource: 'arn:aws:s3:::stanudagramfiles/*'
       Roles: 
         - Ref: "EC2S3AllowRole"
@@ -126,11 +122,12 @@ Resources:
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash
-          apt-get update -y
-          apt-get install apache2 -y
-          systemctl start apache2.service
+          sudo apt-get update -y
+          sudo apt-get install apache2 -y
+          sudo systemctl start apache2.service
           cd /var/www/html
-          echo "Stan's Udagram Demo Web Server Up and Running!" > index.html          
+          sudo rm index.html
+          sudo aws s3 cp s3://stanudagramfiles/index.html .
 
       ImageId: !Ref AMiID
       IamInstanceProfile: !Ref EC2S3InstanceProfile
