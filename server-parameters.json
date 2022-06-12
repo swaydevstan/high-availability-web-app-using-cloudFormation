@@ -1,0 +1,23 @@
+[	
+    {
+    "ParameterKey": "EnvironmentName",
+    "ParameterValue": "Stan-Udagram-UdacityProject"
+    },
+	{
+		"ParameterKey": "AMiID",
+		"ParameterValue": "ami-0729e439b6769d6ab"
+	},
+	{
+		"ParameterKey": "InstanceType",
+		"ParameterValue": "t2.medium"
+	},
+	{
+		"ParameterKey": "InstanceMinSize",
+		"ParameterValue": "2"
+	},
+	{
+		"ParameterKey": "InstanceMaxSize",
+		"ParameterValue": "6"
+	}
+
+]
