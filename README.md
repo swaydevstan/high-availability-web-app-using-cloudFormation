@@ -10,7 +10,7 @@ This repo contains Cloud Formation Templates to deploy infrastructure shown belo
  
  The website is accessible via the Application load balancer created
 
-**Website URL** :  http://stanu-webap-w54uc68tkhp4-1872813576.us-east-1.elb.amazonaws.com/
+<!-- **Website URL** :  http://stanu-webap-w54uc68tkhp4-1872813576.us-east-1.elb.amazonaws.com/ -->
 
 #### How to deploy stack
 To deploy any of the templates, use the command below upon successfully logging in to the aws cli
